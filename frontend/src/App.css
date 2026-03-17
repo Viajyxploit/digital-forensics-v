@@ -1,0 +1,16 @@
+.App {
+  min-height: 100vh;
+  background: #05050A;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at center, rgba(112, 0, 255, 0.15) 0%, rgba(5, 5, 10, 0) 70%);
+}
+
+.neon-border {
+  box-shadow: 0 0 5px #00F2EA, 0 0 10px #00F2EA;
+}
+
+.clip-path-button {
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}

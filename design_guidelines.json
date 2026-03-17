@@ -1,0 +1,125 @@
+{
+  "project_name": "CyberSentinels - AI Forensics & Learning Platform",
+  "design_philosophy": {
+    "theme_name": "Cyber-Physical Intelligence",
+    "core_concept": "Professional grade tools meets futuristic academy. Avoid 'hacker' clichés; embrace 'high-tech laboratory'.",
+    "emotional_tone": "Authoritative, Precision, Fluid, Alert",
+    "visual_style": "Deep Obsidian backgrounds, Neon-Glass surfaces, Micro-interactive touches"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Rajdhani, sans-serif",
+      "body": "Outfit, sans-serif",
+      "code": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-6xl md:text-7xl font-bold tracking-tight uppercase",
+      "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium tracking-wide",
+      "body": "text-base md:text-lg leading-relaxed",
+      "caption": "text-xs font-mono tracking-widest opacity-70"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap');"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": "#05050A",
+      "surface": "#0A0A12",
+      "surface_highlight": "#151520",
+      "border": "#2A2A35",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#A1A1AA"
+    },
+    "seven_color_system": {
+      "cyan_core": "#00F2EA",
+      "neon_red_threat": "#FF0055",
+      "electric_violet_ai": "#7000FF",
+      "acid_lime_safe": "#CCFF00",
+      "solar_orange_warn": "#FF9500",
+      "bright_blue_data": "#007AFF",
+      "laser_yellow_focus": "#FFD600"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at center, rgba(112, 0, 255, 0.15) 0%, rgba(5, 5, 10, 0) 70%)",
+      "glass_surface": "linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%)",
+      "active_border": "linear-gradient(90deg, #00F2EA, #7000FF)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (CSS Grid)",
+    "spacing": {
+      "container_padding": "p-6 md:p-12",
+      "card_padding": "p-6",
+      "section_gap": "gap-8"
+    },
+    "containers": {
+      "dashboard_card": "bg-surface/50 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden relative",
+      "glass_panel": "bg-black/40 backdrop-blur-xl border border-white/5 shadow-2xl"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "relative overflow-hidden bg-white text-black font-bold px-8 py-3 rounded-none clip-path-polygon hover:bg-cyan-core transition-colors duration-300",
+      "secondary": "border border-white/20 text-white px-6 py-2 rounded-none hover:border-cyan-core hover:text-cyan-core transition-all duration-300",
+      "ghost": "text-white/70 hover:text-white transition-colors"
+    },
+    "inputs": {
+      "default": "bg-surface/50 border-white/10 focus:border-cyan-core/50 focus:ring-1 focus:ring-cyan-core/50 rounded-md placeholder:text-white/20"
+    },
+    "cards": {
+      "interactive": "group hover:border-cyan-core/50 transition-colors duration-500 cursor-pointer"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "standard_transition": {
+      "type": "spring",
+      "stiffness": 200,
+      "damping": 20
+    },
+    "micro_interactions": {
+      "hover_lift": "y: -2",
+      "click_press": "scale: 0.98",
+      "glow_on_hover": "boxShadow: '0 0 20px rgba(0, 242, 234, 0.3)'"
+    },
+    "cursor": {
+      "type": "custom",
+      "style": "w-6 h-6 border border-cyan-core rounded-full fixed pointer-events-none mix-blend-difference z-50",
+      "active_style": "scale-150 bg-cyan-core/20"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-black/30 border border-white/10",
+    "neon_borders": "box-shadow: 0 0 5px theme('colors.cyan.core'), 0 0 10px theme('colors.cyan.core')",
+    "scanlines": "background: repeating-linear-gradient(0deg, transparent, transparent 2px, #000 3px); opacity: 0.1; pointer-events: none;"
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1642775196125-38a9eb496568?q=80&w=2000&auto=format&fit=crop",
+      "analyst_working": "https://images.unsplash.com/photo-1573166717911-d3625658b6f7?q=80&w=1000&auto=format&fit=crop",
+      "hardware_closeup": "https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?q=80&w=1000&auto=format&fit=crop",
+      "server_room": "https://images.unsplash.com/photo-1558494949-efc52728101c?q=80&w=1000&auto=format&fit=crop"
+    },
+    "icons": "lucide-react"
+  },
+  "instructions_to_main_agent": [
+    "INSTALL_DEPENDENCIES: `yarn add framer-motion tsparticles @tsparticles/react @tsparticles/slim recharts clsx tailwind-merge`",
+    "SETUP_THEME: Update tailwind.config.js with the 'seven_color_system' immediately.",
+    "CUSTOM_CURSOR: Create a global <CustomCursor /> component that tracks mouse position and wraps the app.",
+    "NAVIGATION: Create a 'Dock' style floating navigation for the dashboard, distinct from the Landing Page nav.",
+    "AI_CHAT: The AI Assistant should feel like a 'HUD' overlay, floating on the right side, glassmorphic.",
+    "FORENSICS_LAB: Use a 'split-pane' layout. Left: File Tree/Evidence. Center: Hex Viewer/Analysis. Right: Metadata/AI Findings.",
+    "LEARNING_HUB: Use 'Course Cards' that look like 'Data Cartridges' - holographic borders, techy details.",
+    "ANIMATION_RULE: Every interactive element (button, card, link) MUST have a `whileHover` and `whileTap` prop from Framer Motion.",
+    "CRITICAL: Do NOT use default Shadcn styles. Override everything with the 'border-white/10' and 'bg-black/40' glass aesthetics."
+  ],
+  "universal_guidelines": [
+    "Don't make generic centered layouts. Use asymmetry.",
+    "Dark colors look good when used independently without gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "NEVER use AI assistant Emoji characters."
+  ]
+}
