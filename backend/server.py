@@ -12,7 +12,6 @@ import uuid
 from datetime import datetime, timezone, timedelta
 import bcrypt
 import jwt
-from emergentintegrations.llm.chat import LlmChat, UserMessage
 import json
 import base64
 from fastapi.responses import Response
