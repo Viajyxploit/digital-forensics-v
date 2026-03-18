@@ -20,7 +20,7 @@ from services.certificate_service import certificate_service
 from services.threat_detection_service import threat_detection_service
 from services.lab_service import lab_service
 from services.oauth_service import oauth_service
-from openai import OpenAI
+# from openai import OpenAI
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
