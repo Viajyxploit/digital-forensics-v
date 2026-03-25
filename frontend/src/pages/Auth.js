@@ -5,8 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'sonner';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = process.env.REACT_APP_BACKEND_URL 
+  ? `${process.env.REACT_APP_BACKEND_URL}/api`
+  : "https://digital-forensics-v.onrender.com/api";
+
 
 const Auth = ({ setToken }) => {
   const navigate = useNavigate();
@@ -20,10 +22,12 @@ const Auth = ({ setToken }) => {
 
     try {
       const endpoint = isLogin ? '/auth/login' : '/auth/signup';
+      console.log("API URL:", `${API}${endpoint}`);
+
       const payload = isLogin 
         ? { email: formData.email, password: formData.password }
         : { email: formData.email, password: formData.password, name: formData.name };
-
+      
       const response = await axios.post(`${API}${endpoint}`, payload);
       
       localStorage.setItem('token', response.data.token);
