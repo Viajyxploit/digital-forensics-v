@@ -7,8 +7,7 @@ import { toast } from 'sonner';
 import Quiz from '../components/Quiz';
 import LabEnvironment from '../components/labs/LabEnvironment';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = "https://digital-forensics-v.onrender.com/api";
 
 const CourseDetail = () => {
   const { courseId } = useParams();
