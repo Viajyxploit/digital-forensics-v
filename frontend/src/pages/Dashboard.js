@@ -7,8 +7,7 @@ import DashboardHome from '../components/DashboardHome';
 import AIAssistant from '../components/AIAssistant';
 import PlatformFooter from '../components/PlatformFooter';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = "https://digital-forensics-v.onrender.com/api";
 
 const Dashboard = () => {
   const navigate = useNavigate();
