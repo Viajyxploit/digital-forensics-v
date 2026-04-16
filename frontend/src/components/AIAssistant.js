@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Brain } from 'lucide-react';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = "https://digital-forensics-v.onrender.com/api";
 
 const AIAssistant = ({ onClose }) => {
   const [messages, setMessages] = useState([]);
